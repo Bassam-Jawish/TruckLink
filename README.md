@@ -145,26 +145,6 @@ flutter doctor
 
 ---
 
-## API Configuration
-
-Update `lib/config/config.dart` with your backend URLs:
-
-```dart
-class Configuration {
-  static const String baseUrl = "https://your-api-host.com/api/";
-  static const String storageUrl = "https://your-api-host.com/storage/";
-}
-```
-
-| Constant | Description |
-|---|---|
-| `baseUrl` | REST API prefix used by `ApiService` |
-| `storageUrl` | Base URL for uploaded media/assets |
-
-Authentication uses the **trip code as the Bearer token** — there is no separate JWT refresh flow. On `401`/`403`, the token is cleared and the user is redirected to login.
-
----
-
 ## Getting Started
 
 ```bash
